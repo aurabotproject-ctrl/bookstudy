@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Reading Room — Book Studies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="stars" id="stars" aria-hidden="true"></div>
+
+<header class="hub-hero">
+  <div class="hero-bg" style="background-image:url('images/hub-hero.jpg')"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="kicker">Room 14 · Book Studies</p>
+    <h1>The Reading&nbsp;Room</h1>
+    <p class="tagline">Four unforgettable stories, four worlds to step into. Pick a book study below and start the adventure.</p>
+  </div>
+  <div class="hero-fade" aria-hidden="true"></div>
+</header>
+
+<main class="shelf">
+  <div class="shelf-grid">
+
+    <a class="book-card wildrobot" href="wildrobot/index.html">
+      <div class="card-bg" style="background-image:url('images/wildrobot-hero.webp')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="images/wildrobot-logo.webp" alt="" />
+        <p class="card-eyebrow">Peter Brown</p>
+        <h2>The Wild Robot</h2>
+        <p class="card-blurb">A robot washes ashore on a wild island and learns to survive — and to belong.</p>
+        <span class="enter-btn">Enter the island <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+    <a class="book-card boy" href="boy/index.html">
+      <div class="card-bg" style="background-image:url('images/boy-hero.jpg')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="images/boy-favicon.png" alt="" />
+        <p class="card-eyebrow">Roald Dahl</p>
+        <h2>Boy: Tales of Childhood</h2>
+        <p class="card-blurb">True (and truly wild) stories from Dahl's own school days — mischief included.</p>
+        <span class="enter-btn">Open the tuck box <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+    <a class="book-card oneivan" href="oneivan/index.html">
+      <div class="card-bg" style="background-image:url('images/oneivan-hero.webp')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="images/oneivan-logo.webp" alt="" />
+        <p class="card-eyebrow">Katherine Applegate</p>
+        <h2>The One and Only Ivan</h2>
+        <p class="card-blurb">A gorilla artist in a shopping-mall enclosure dreams of a better life for his friends.</p>
+        <span class="enter-btn">Step into the mall <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+    <a class="book-card wonder" href="wonder/index.html">
+      <div class="card-bg" style="background-image:url('images/wonder-hero.jpg')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="images/wonder-logo.png" alt="" />
+        <p class="card-eyebrow">R. J. Palacio</p>
+        <h2>Wonder</h2>
+        <p class="card-blurb">Auggie starts fifth grade wanting one thing: to be seen as an ordinary kid.</p>
+        <span class="enter-btn">Launch into orbit <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer class="hub-footer">
+  <p>Four ten-week reading units for Years 5–6 · NZ Curriculum Level 3–4 English · Built for classroom use</p>
+</footer>
+
+<script>
+  // gentle starfield
+  const layer = document.getElementById('stars');
+  const n = 60;
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement('span');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 60 + '%';
+    s.style.setProperty('--d', (2 + Math.random() * 3).toFixed(2) + 's');
+    s.style.setProperty('--delay', (Math.random() * 4).toFixed(2) + 's');
+    s.style.width = s.style.height = (1 + Math.random() * 2).toFixed(1) + 'px';
+    layer.appendChild(s);
+  }
+</script>
+</body>
+</html>

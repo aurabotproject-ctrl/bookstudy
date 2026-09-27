@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boy: Tales of Childhood — Book Study</title>
+<link id="app-favicon" rel="icon" type="image/png" href="">
+<script src="images.js"></script>
+<script>
+  document.getElementById('app-favicon').href = IMG_FAVICON;
+  document.documentElement.style.setProperty('--hero-img', 'url("' + IMG_HERO + '")');
+  document.documentElement.style.setProperty('--bg-pattern', 'url("' + IMG_BG_PATTERN + '")');
+  if(typeof IMG_BG_TUCKBOX!=='undefined') document.documentElement.style.setProperty('--tuckbox-bg', 'url("' + IMG_BG_TUCKBOX + '")');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,800&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style id="pageRules"></style>
+</head>
+<body>
+<div class="sweets-layer no-print" id="sweetsLayer" aria-hidden="true"></div>
+<div id="app"></div>
+
+<script src="boy-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
