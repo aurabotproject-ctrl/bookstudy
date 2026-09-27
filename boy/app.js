@@ -539,11 +539,12 @@ function certificateHTML(){
   const braveReaderBadge = (typeof IMG_BADGE_BRAVE_READER!=='undefined')
     ? `<img src="${IMG_BADGE_BRAVE_READER}" alt="Brave Reader badge" style="width:100px;height:100px;object-fit:contain;margin:0 auto 6px;display:block;">` : '';
   return `<div class="certificate"${borderStyle}>
-    <div class="cert-kicker">Boy: Tales of Childhood — Book Study</div>
+    <div class="cert-ribbon">Boy: Tales of Childhood</div>
     ${braveReaderBadge}
+    <div class="cert-kicker">A True Story, Bravely Told</div>
     <h2 class="cert-title">Certificate of Completion</h2>
     <p class="cert-line">This certifies that</p>
-    <div class="cert-name">&nbsp;</div>
+    <div class="cert-name" contenteditable="true" spellcheck="false">Student Name</div>
     <p class="cert-line">has read the whole of Roald Dahl's <i>Boy: Tales of Childhood</i>, completed all ten weeks of the book study, and shown resilience, courage and curiosity along the way.</p>
     <div class="cert-row"><span>Date: ____________________</span><span>Teacher's signature: ____________________</span></div>
   </div>`;
@@ -1066,7 +1067,11 @@ function render(){
   else if(state.view==='quizprintkey') app.innerHTML = renderQuizPrintPage(true);
   else if(state.view==='workbook') app.innerHTML = renderWorkbook();
   else if(state.view==='readingplan') app.innerHTML = renderReadingPlan();
-  else if(state.view==='certificate') app.innerHTML = renderCertificatePrint();
+  else if(state.view==='certificate'){
+    app.innerHTML = renderCertificatePrint();
+    const nm = app.querySelector('.cert-name');
+    if(nm){ nm.addEventListener('focus', ()=>{ if(nm.textContent==='Student Name'){ const r=document.createRange(); r.selectNodeContents(nm); const s=getSelection(); s.removeAllRanges(); s.addRange(r); } }); }
+  }
   /* A4 + full-bleed cover page only while a booklet is on screen, so other print jobs are unchanged */
   document.getElementById('pageRules').textContent = (state.view==='workbook' || state.view==='teacherbook')
     ? '@page{size:A4;margin:14mm 14mm 16mm;@bottom-center{content:counter(page);font:9pt sans-serif;color:#777}} @page:first{margin:0;@bottom-center{content:none}}'
