@@ -226,7 +226,7 @@ function renderHome() {
         <div><div class="kicker">The journey</div><h2>Roz's story, week by week</h2>
           <p>Follow the island through the seasons. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
         <div class="toolbar">
-          <button class="btn ghost small" onclick="downloadReadingSchedule()">${ICONS.download} Reading schedule</button>
+          <button class="btn ghost small" onclick="downloadReadingSchedule()"><img class="btn-icon" src="${IMG("icon-schedule")}" alt="" /> Reading schedule</button>
           <button class="btn ghost small" onclick="openBook('teacher-pack.html')"><img class="btn-icon" src="${IMG("icon-rubric")}" alt="" /> Teacher Pack</button>
           <button class="btn copper small" onclick="openBook('workbook.html')"><img class="btn-icon" src="${IMG("icon-journal")}" alt="" /> Student Workbook</button>
         </div>
@@ -247,7 +247,7 @@ function renderHome() {
       <div class="toolkit">
         <button class="tool reveal" onclick="openBook('workbook.html')"><img src="${IMG("icon-journal")}" alt="" /><b>Student Workbook</b><span>A printable workbook with a cover, every week's questions, projects, quizzes and check-ins.</span></button>
         <button class="tool reveal" style="--d:.03s" onclick="openBook('teacher-pack.html')"><img src="${IMG("icon-print-all")}" alt="" /><b>Teacher Pack</b><span>Reading schedule, all lesson plans, answer keys, marking guide with exemplars and class record sheets.</span></button>
-        <button class="tool reveal" style="--d:.06s" onclick="downloadReadingSchedule()"><div class="svg-wrap">${ICONS.calendar}</div><b>Reading schedule</b><span>Download the term's chapter-by-chapter plan as a text file.</span></button>
+        <button class="tool reveal" style="--d:.06s" onclick="downloadReadingSchedule()"><img src="${IMG("icon-schedule")}" alt="" /><b>Reading schedule</b><span>Download the term's chapter-by-chapter plan as a text file.</span></button>
         <button class="tool reveal" style="--d:.12s" onclick="go('week10/rubric')"><img src="${IMG("icon-rubric")}" alt="" /><b>Progress Rubric</b><span>Track reading progress across all ten rubric strands.</span></button>
         <button class="tool reveal" style="--d:.18s" onclick="go('week10')"><img src="${IMG("icon-presentation")}" alt="" /><b>Final Project</b><span>Week 10 options, lesson plan, gallery walk and celebration.</span></button>
         <button class="tool reveal" style="--d:.24s" onclick="go('week10/certificate')"><img src="${IMG("badge-kindness")}" alt="" /><b>Certificate</b><span>A printable "Kindness Grows Wild" completion certificate.</span></button>

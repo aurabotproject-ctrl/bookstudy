@@ -1,10 +1,10 @@
 /* ============================================================
-   THE ONE AND ONLY IVAN — BOOK CLUB APP BEHAVIOUR
+   JUST A GIRL — BOOK STUDY APP BEHAVIOUR
    Reads from data.js. Renders into #app. Hash-based routing.
    ============================================================ */
 
 const root = document.getElementById("app");
-const LS_PREFIX = "ivan_";
+const LS_PREFIX = "justagirl_";
 
 function ls(key, val) {
   if (val === undefined) {
@@ -99,12 +99,12 @@ function shellStart(crumbs, currentWeek) {
   header.innerHTML = `
     <div class="wrap topbar-inner">
       <button class="brand" onclick="go('')" aria-label="Home">
-        <img src="${IMG("logo-print")}" alt="" class="brand-logo" />
-        <span class="brand-text"><b>The One and Only Ivan</b><span>Book Club · Years 5–6</span></span>
+        <img src="${IMG("logo-songbird")}" alt="" class="brand-logo" />
+        <span class="brand-text"><b>Just a Girl</b><span>Book Study · Years 7–8</span></span>
       </button>
       <nav class="crumbs">${crumbs}</nav>
       <div class="topbar-actions">
-        <a class="btn ghost small hub-back" href="../index.html" title="Back to all book studies">&larr; All Studies</a>
+        <a class="btn ghost small hub-back" href="../years7-8/index.html" title="Back to all book studies">&larr; All Studies</a>
         <div class="week-jump" id="weekJump">
           <button class="btn ghost small" id="weekJumpBtn" aria-haspopup="true">${ICONS.grid} Weeks</button>
           <div class="week-jump-menu">${jump}</div>
@@ -156,7 +156,7 @@ function reveal(scope) {
   els.forEach((e) => revealObs.observe(e));
 }
 
-/* drifting handprints in the background */
+/* drifting leaves in the background */
 function spawnLeaves() {
   const layer = document.getElementById("leafLayer");
   if (!layer || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -168,7 +168,7 @@ function spawnLeaves() {
   }
 }
 
-/* handprint confetti burst */
+/* leaf confetti burst */
 function confetti(n = 60) {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const c = document.createElement("div");
@@ -204,9 +204,9 @@ function renderHome() {
     <section class="home-hero">
       <div class="bg" data-parallax></div>
       <div class="wrap hero-content">
-        <span class="eyebrow"><span class="dot"></span> Whole-class book study · Katherine Applegate</span>
-        <h1><em>Welcome to the</em>Exit 8 Big Top Mall</h1>
-        <p class="lede">Nine weeks of reading with Ivan, Stella, Bob and Ruby, plus a final project &amp; celebration week. Everything you need to teach it is right here.</p>
+        <span class="eyebrow"><span class="dot"></span> Whole-class book study · Lia Levi</span>
+        <h1><em>One girl's true story:</em>Just a Girl</h1>
+        <p class="lede">Nine weeks following Lia Levi — a painfully shy little girl who has to keep changing cities, changing schools, and finally hiding under a false name, just to survive Fascist Italy — plus a final project &amp; celebration week. Everything you need to teach it is right here.</p>
         <div class="hero-ctas">
           ${last ? `<button class="btn copper big" onclick="go('${last === 10 ? "week10" : "week" + last}')">Continue ${lastLabel} ${ICONS.arrowR}</button>` : `<button class="btn copper big" onclick="go('week1')">Start Week 1 ${ICONS.arrowR}</button>`}
           <button class="btn glass big" onclick="document.getElementById('journey').scrollIntoView({behavior:'smooth'})">Explore all weeks</button>
@@ -223,10 +223,10 @@ function renderHome() {
       </div>
 
       <div class="section-head" id="journey">
-        <div><div class="kicker">The journey</div><h2>Ivan's story, week by week</h2>
-          <p>Follow Ivan through the mall, the memories and the mural. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
+        <div><div class="kicker">The journey</div><h2>Lia's story, week by week</h2>
+          <p>Follow Lia from a shy six-year-old on an Italian beach to a girl who finds her voice, hides in plain sight, and comes home free. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
         <div class="toolbar">
-          <button class="btn ghost small" onclick="downloadReadingSchedule()"><img class="btn-icon" src="${IMG("icon-schedule")}" alt="" /> Reading schedule</button>
+          <button class="btn ghost small" onclick="downloadReadingSchedule()">${ICONS.download} Reading schedule</button>
           <button class="btn ghost small" onclick="openBook('teacher-pack.html')"><img class="btn-icon" src="${IMG("icon-rubric")}" alt="" /> Teacher Pack</button>
           <button class="btn copper small" onclick="openBook('workbook.html')"><img class="btn-icon" src="${IMG("icon-journal")}" alt="" /> Student Workbook</button>
         </div>
@@ -250,7 +250,7 @@ function renderHome() {
         <button class="tool reveal" style="--d:.06s" onclick="downloadReadingSchedule()"><img src="${IMG("icon-schedule")}" alt="" /><b>Reading schedule</b><span>Download the term's chapter-by-chapter plan as a text file.</span></button>
         <button class="tool reveal" style="--d:.12s" onclick="go('week10/rubric')"><img src="${IMG("icon-rubric")}" alt="" /><b>Progress Rubric</b><span>Track reading progress across all ten rubric strands.</span></button>
         <button class="tool reveal" style="--d:.18s" onclick="go('week10')"><img src="${IMG("icon-presentation")}" alt="" /><b>Final Project</b><span>Week 10 options, lesson plan, gallery walk and celebration.</span></button>
-        <button class="tool reveal" style="--d:.24s" onclick="go('week10/certificate')"><img src="${IMG("badge-empathy")}" alt="" /><b>Certificate</b><span>A printable "The One and Only You" completion certificate.</span></button>
+        <button class="tool reveal" style="--d:.24s" onclick="go('week10/certificate')"><img src="${IMG("badge-your-voice")}" alt="" /><b>Certificate</b><span>A printable "Just a Girl, Just Free" completion certificate.</span></button>
       </div>
     </div>
   `;
@@ -298,7 +298,7 @@ function renderWeek(week) {
       <div class="rubric-tags reveal">Rubric evidence this week: ${tagsHtml(week.rubricTags)}</div>
 
       <div class="section-head">
-        <div><div class="kicker">The week's trail</div><h2>Five days at the mall</h2></div>
+        <div><div class="kicker">The week's trail</div><h2>Five days with the story</h2></div>
       </div>
       <div class="trail" id="daysGrid"></div>
 
@@ -524,7 +524,7 @@ function renderQuiz(week, day) {
         <aside class="quiz-side no-print">
           <div class="side-card" style="text-align:center">
             <div class="ring">
-              <svg viewBox="0 0 150 150"><defs><linearGradient id="ringGrad" x1="0" x2="1"><stop offset="0" stop-color="#4d7c58"/><stop offset="1" stop-color="#e8622f"/></linearGradient></defs>
+              <svg viewBox="0 0 150 150"><defs><linearGradient id="ringGrad" x1="0" x2="1"><stop offset="0" stop-color="#b5563c"/><stop offset="1" stop-color="#e8b84b"/></linearGradient></defs>
                 <circle class="track" cx="75" cy="75" r="62"/><circle class="fill" id="ringFill" cx="75" cy="75" r="62" stroke-dasharray="${C}" stroke-dashoffset="${C}"/></svg>
               <div class="ring-label"><div><b id="ringNum">0</b><span>of ${total} answered</span></div></div>
             </div>
@@ -636,7 +636,7 @@ function renderFinalRubric(week) {
       ${pageHead({ bg: week ? BANNER(week.num) : BANNER(10), icon: IMG("icon-rubric"), small: week ? `Week ${week.num} · Rubric evidence: ${week.rubricTags.join(", ")}` : "Whole unit", title: "Reading Progress Rubric",
         text: week ? "This week's strands are highlighted below. Tap a strand to see what success looks like." : "Tap a level to record where the class is at. Tap a strand to see what success looks like.",
         actions: `<button class="btn glass small" onclick="openBook('teacher-pack.html?section=marking')">${ICONS.print} Marking guide</button><button class="btn glass small" onclick="printBlankRubric()">${ICONS.print} Class record sheet</button>` })}
-      <div class="kindness-strip reveal"><img src="${IMG("badge-empathy")}" alt="" /><div><b>Three simple levels</b>Not Achieved · Working Towards · Achieved — and Achieved means the Level 3 curriculum expectation has been met.</div></div>
+      <div class="kindness-strip reveal"><img src="${IMG("badge-your-voice")}" alt="" /><div><b>Three simple levels</b>Not Achieved · Working Towards · Achieved — and Achieved means the Level 4 curriculum expectation has been met.</div></div>
       <div class="legend">${RUBRIC_LEVELS.map((l, i) => `<span><i style="background:var(--lv-${i + 1})"></i>${l}</span>`).join("")}</div>
       <div class="rubric-list" id="rList"></div>
     </div>`;
@@ -688,7 +688,7 @@ function renderWeek10(sub) {
         <div class="meta"><span class="pill">No new reading</span><span class="pill">3 project lessons</span><span class="pill">Gallery walk</span><span class="pill">Certificates</span></div>
         <div class="toolbar">
           <button class="btn copper" onclick="go('week10/rubric')"><img class="btn-icon" src="${IMG("icon-rubric")}" alt="" /> Reading Progress Rubric</button>
-          <button class="btn glass" onclick="go('week10/certificate')"><img class="btn-icon" src="${IMG("badge-empathy")}" alt="" /> Certificate</button>
+          <button class="btn glass" onclick="go('week10/certificate')"><img class="btn-icon" src="${IMG("badge-your-voice")}" alt="" /> Certificate</button>
           <button class="btn glass" onclick="openBook('teacher-pack.html?week=10')"><img class="btn-icon" src="${IMG("icon-print-all")}" alt="" /> Teacher plan</button>
         </div>
       </div>
@@ -696,7 +696,7 @@ function renderWeek10(sub) {
     <div class="wrap">
       <div class="section-head">
         <div><div class="kicker">Choose one</div><h2>Final project options</h2>
-          <p>No new reading this week. Students apply everything they've learned about <em>The One and Only Ivan</em> to one final project.</p></div>
+          <p>No new reading this week. Students apply everything they've learned about <em>Just a Girl</em> to one final project.</p></div>
       </div>
       <div class="projects-grid" id="w10opts"></div>
 
@@ -709,8 +709,8 @@ function renderWeek10(sub) {
           <div class="fp-text"><small>Thursday</small><h3>Presentation &amp; Gallery Walk</h3><p>${WEEK10.thursday}</p></div></div>
       </div>
       <div class="feature-panel reveal">
-        <div class="bg" style="background-image:url('${IMG("wall-mural-banner")}')"></div>
-        <div class="fp-inner"><img class="fp-icon" src="${IMG("badge-empathy")}" alt="" />
+        <div class="bg" style="background-image:url('${IMG("twin-flags-balcony")}')"></div>
+        <div class="fp-inner"><img class="fp-icon" src="${IMG("badge-your-voice")}" alt="" />
           <div class="fp-text"><small>Friday</small><h3>Celebration &amp; Reflection Circle</h3><p>${WEEK10.friday}</p></div></div>
       </div>
 
@@ -755,11 +755,11 @@ function renderCertificate() {
       </div>
       <div class="certificate page-enter">
         <img class="cert-frame" src="${IMG("certificate-border")}" alt="" />
-        <div class="cert-ribbon">The One and Only Ivan</div>
-        <img class="cert-badge" src="${IMG("badge-empathy")}" alt="" />
-        <div class="cert-kicker">The One and Only You</div>
+        <div class="cert-ribbon">Just a Girl</div>
+        <img class="cert-badge" src="${IMG("badge-your-voice")}" alt="" />
+        <div class="cert-kicker">Just a Girl, Just Free</div>
         <h2>Certificate of Completion</h2>
-        <p class="cert-sub">awarded for completing <em>The One and Only Ivan</em> Book Study Unit</p>
+        <p class="cert-sub">awarded for completing the <em>Just a Girl</em> Book Study Unit</p>
         <div class="cert-name" contenteditable="true" spellcheck="false">Student Name</div>
         <div class="cert-sign"><div>Teacher signature</div><div>Date</div></div>
       </div>
@@ -776,7 +776,7 @@ function printLessonPlan(weekNum, day) {
   const info = week.days[day];
   const w = window.open("", "_blank");
   w.document.write(`<html><head><title>Lesson Plan — Week ${weekNum} ${day}</title>${printStyles()}</head><body>
-    <h1>The One and Only Ivan — Lesson Plan</h1>
+    <h1>Just a Girl — Lesson Plan</h1>
     <h2>Week ${weekNum}: ${week.title} — ${DAY_LABELS[day]}</h2>
     <p><b>Reading:</b> ${info.chapters} — ${info.subtitle}</p>
     <p><b>Learning Intention:</b> ${week.LI}</p>
@@ -800,7 +800,7 @@ function printWeekPack(weekNum) { openBook(`teacher-pack.html?week=${weekNum}`);
 function printQuiz(weekNum, withKey) {
   const week = WEEKS.find((w) => w.num === weekNum);
   const w2 = window.open("", "_blank");
-  let body = `<h1>The One and Only Ivan — Week ${weekNum} Quiz</h1><p>${week.chapters}</p><ol>`;
+  let body = `<h1>Just a Girl — Week ${weekNum} Quiz</h1><p>${week.chapters}</p><ol>`;
   week.quiz.forEach((q) => { body += `<li>${q.q}${withKey ? `<br><i>Answer: ${q.answer}</i>` : `<br>_______________________________________________`}</li>`; });
   body += `</ol>`;
   w2.document.write(`<html><head><title>Week ${weekNum} Quiz</title>${printStyles()}</head><body>${body}</body></html>`);
@@ -810,7 +810,7 @@ function printQuiz(weekNum, withKey) {
 function printProjects(weekNum) {
   const week = WEEKS.find((w) => w.num === weekNum);
   const w2 = window.open("", "_blank");
-  let body = `<h1>The One and Only Ivan — Week ${weekNum} Project Cards</h1>`;
+  let body = `<h1>Just a Girl — Week ${weekNum} Project Cards</h1>`;
   week.projects.forEach((p) => { body += `<div style="border:1px solid #ccc;border-radius:10px;padding:14px;margin-bottom:12px"><b>${p.title}</b> (${p.type})<p>${p.brief}</p></div>`; });
   w2.document.write(`<html><head><title>Week ${weekNum} Projects</title>${printStyles()}</head><body>${body}</body></html>`);
   w2.document.close(); w2.focus(); w2.print();
@@ -819,7 +819,7 @@ function printProjects(weekNum) {
 function printBlankRubric() { openBook("teacher-pack.html?section=record"); }
 
 function downloadReadingSchedule() {
-  let text = "THE ONE AND ONLY IVAN — TERM READING SCHEDULE\n" + "=".repeat(47) + "\n\n";
+  let text = "JUST A GIRL — TERM READING SCHEDULE\n" + "=".repeat(45) + "\n\n";
   WEEKS.forEach((w) => {
     text += `WEEK ${w.num}: ${w.title} (${w.chapters})\n`;
     DAY_ORDER.forEach((d) => {
@@ -834,7 +834,7 @@ function downloadReadingSchedule() {
   const blob = new Blob([text], { type: "text/plain" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "Ivan_Reading_Schedule.txt";
+  a.download = "Just_a_Girl_Reading_Schedule.txt";
   a.click();
 }
 
@@ -842,8 +842,8 @@ function printAllBooklet() { openBook("workbook.html"); }
 
 function printStyles() {
   return `<style>
-    body{font-family:'Segoe UI',Verdana,sans-serif;color:#231f1b;padding:20px;line-height:1.5}
-    h1{color:#2f3b32} h2{color:#4d7c58;margin-top:22px} h3{color:#8c6a4a}
+    body{font-family:'Segoe UI',Verdana,sans-serif;color:#241f1a;padding:20px;line-height:1.5}
+    h1{color:#26365a} h2{color:#a3492f;margin-top:22px} h3{color:#8a6a52}
     table{margin-top:10px} li{margin-bottom:6px}
   </style>`;
 }

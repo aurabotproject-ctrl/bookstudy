@@ -186,7 +186,7 @@ function renderHome() {
       <div class="toolkit">
         <a class="tool reveal" href="workbook.html" target="_blank" rel="noopener">${imgTag("iconJournal", "")}<b>Student workbook</b><span>The printable student workbook for the whole unit.</span><small>Print / Save as PDF</small></a>
         <a class="tool reveal" style="--d:.05s" href="teacher-pack.html" target="_blank" rel="noopener">${imgTag("iconPrintAll", "")}<b>Teacher pack</b><span>Planning, every lesson plan and the 3-level marking guide.</span><small>Print / Save as PDF</small></a>
-        <button class="tool reveal" style="--d:.1s" onclick="downloadReadingSchedule()"><div class="emoji">📅</div><b>Reading schedule</b><span>Day-by-day reading ranges for the whole term.</span><small>Downloads a page</small></button>
+        <button class="tool reveal" style="--d:.1s" onclick="downloadReadingSchedule()">${imgTag("iconSchedule", "")}<b>Reading schedule</b><span>Day-by-day reading ranges for the whole term.</span><small>Downloads a page</small></button>
         <button class="tool reveal" style="--d:.15s" onclick="go('rubric')">${imgTag("iconQuizDay", "")}<b>Progress rubric</b><span>Mark the class on R1–R10: Not Achieved, Working Towards, Achieved.</span></button>
         <button class="tool reveal" style="--d:.2s" onclick="go('week10/fri')">${imgTag("choiceKindBadge", "")}<b>Certificates</b><span>Print "Certificate of Choosing Kind" for the celebration.</span></button>
       </div>
