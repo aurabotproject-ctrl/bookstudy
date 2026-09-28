@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Next Chapter — Years 7–8 Book Studies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div class="stars" id="stars" aria-hidden="true"></div>
+
+<a class="page-nav prev" href="../index.html" aria-label="Go back to Years 5–6 book studies">
+  <span class="page-nav-arrow">&larr;</span>
+  <span class="page-nav-label">Years 5&ndash;6</span>
+</a>
+
+<header class="hub-hero">
+  <div class="hero-bg" style="background-image:url('../images/years7-8-hero.jpg')"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-panel">
+      <p class="kicker">Room 14 · Years 7&ndash;8 Book Studies</p>
+      <h1>The Next&nbsp;Chapter</h1>
+      <p class="tagline">Four powerful stories for older readers — survival, journey, courage and hope. Pick a book study below and start reading.</p>
+    </div>
+  </div>
+  <div class="hero-fade" aria-hidden="true"></div>
+</header>
+
+<main class="shelf">
+  <div class="shelf-grid">
+
+    <a class="book-card hatchet" href="../hatchet/index.html">
+      <div class="card-bg" style="background-image:url('../images/hatchet-hero.webp')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="../images/hatchet-logo.webp" alt="" />
+        <p class="card-eyebrow">Gary Paulsen</p>
+        <h2>Hatchet</h2>
+        <p class="card-blurb">A boy alone in the Canadian wilderness after a plane crash, armed with nothing but a hatchet and his will to survive.</p>
+        <span class="enter-btn">Enter the wilderness <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+    <a class="book-card refugee" href="../refugee/index.html">
+      <div class="card-bg" style="background-image:url('../images/refugee-hero.webp')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="../images/refugee-logo.webp" alt="" />
+        <p class="card-eyebrow">Alan Gratz</p>
+        <h2>Refugee</h2>
+        <p class="card-blurb">Three refugees, three eras, one desperate search for home and safety — three journeys that echo across time.</p>
+        <span class="enter-btn">Begin the journey <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+    <div class="book-card justagirl coming-soon" aria-disabled="true">
+      <div class="card-bg placeholder-justagirl"></div>
+      <div class="card-tint"></div>
+      <span class="coming-badge">Coming soon</span>
+      <div class="card-content">
+        <p class="card-eyebrow">Lia Levi</p>
+        <h2>Just a Girl</h2>
+        <p class="card-blurb">A true memoir of a Jewish girl hiding in plain sight in wartime Rome — ordinary life under extraordinary danger.</p>
+      </div>
+    </div>
+
+    <div class="book-card longwalk coming-soon" aria-disabled="true">
+      <div class="card-bg placeholder-longwalk"></div>
+      <div class="card-tint"></div>
+      <span class="coming-badge">Coming soon</span>
+      <div class="card-content">
+        <p class="card-eyebrow">Linda Sue Park</p>
+        <h2>A Long Walk to Water</h2>
+        <p class="card-blurb">Two true-inspired stories from Sudan, decades apart, joined by the long walk for something as simple as clean water.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="hub-footer">
+  <p>Two ten-week reading units for Years 7–8 (two more coming soon) · NZ Curriculum Level 4 English · Built for classroom use</p>
+</footer>
+
+<script>
+  // gentle starfield
+  const layer = document.getElementById('stars');
+  const n = 60;
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement('span');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 60 + '%';
+    s.style.setProperty('--d', (2 + Math.random() * 3).toFixed(2) + 's');
+    s.style.setProperty('--delay', (Math.random() * 4).toFixed(2) + 's');
+    s.style.width = s.style.height = (1 + Math.random() * 2).toFixed(1) + 'px';
+    layer.appendChild(s);
+  }
+</script>
+</body>
+</html>

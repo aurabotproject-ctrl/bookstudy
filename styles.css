@@ -153,6 +153,53 @@ h1, h2 { font-family: 'Fraunces', serif; margin: 0; }
 .book-card.boy:hover .card-tint { background: linear-gradient(180deg, rgba(59,36,21,.1) 0%, rgba(59,36,21,.6) 55%, rgba(43,26,15,.95) 100%); }
 .book-card.oneivan:hover .card-tint { background: linear-gradient(180deg, rgba(30,20,16,.1) 0%, rgba(60,25,18,.6) 55%, rgba(32,15,12,.95) 100%); }
 .book-card.wonder:hover .card-tint { background: linear-gradient(180deg, rgba(11,21,48,.1) 0%, rgba(18,32,61,.6) 55%, rgba(11,21,48,.95) 100%); }
+.book-card.hatchet:hover .card-tint { background: linear-gradient(180deg, rgba(26,38,32,.1) 0%, rgba(26,38,32,.6) 55%, rgba(18,26,22,.95) 100%); }
+.book-card.refugee:hover .card-tint { background: linear-gradient(180deg, rgba(27,36,54,.1) 0%, rgba(27,36,54,.6) 55%, rgba(18,25,38,.95) 100%); }
+
+/* ---------- side arrow tabs (page-to-page nav) ---------- */
+.page-nav {
+  position: fixed; top: 50%; z-index: 60; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 20px 11px; text-decoration: none; color: #fff;
+  background: rgba(15, 19, 36, .68);
+  backdrop-filter: blur(10px) saturate(1.3);
+  -webkit-backdrop-filter: blur(10px) saturate(1.3);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 12px 30px -12px rgba(0,0,0,.6);
+  transition: background .2s, transform .2s;
+}
+.page-nav:hover { background: rgba(28, 35, 62, .88); }
+.page-nav.next { right: 0; border-radius: 18px 0 0 18px; border-right: none; }
+.page-nav.next:hover { transform: translateY(-50%) translateX(-4px); }
+.page-nav.prev { left: 0; border-radius: 0 18px 18px 0; border-left: none; }
+.page-nav.prev:hover { transform: translateY(-50%) translateX(4px); }
+.page-nav-label {
+  writing-mode: vertical-rl; text-orientation: mixed;
+  font-weight: 800; letter-spacing: .1em; text-transform: uppercase; font-size: .76rem;
+  color: #ffd479;
+}
+.page-nav-arrow { font-size: 1.3rem; line-height: 1; color: #fff; }
+
+/* ---------- coming-soon cards ---------- */
+.book-card.coming-soon { cursor: default; }
+.book-card.coming-soon .card-bg { background-size: cover; background-position: center; }
+.card-bg.placeholder-justagirl { background-image: linear-gradient(135deg, #7a5259 0%, #45303a 55%, #2a2030 100%); }
+.card-bg.placeholder-longwalk { background-image: linear-gradient(135deg, #d59a4e 0%, #a06a30 55%, #4a3320 100%); }
+.book-card.coming-soon .card-tint { background: linear-gradient(180deg, rgba(10,10,15,.25) 0%, rgba(10,10,15,.65) 55%, rgba(10,10,15,.95) 100%); }
+.coming-badge {
+  position: absolute; top: 20px; right: 20px; z-index: 2;
+  background: rgba(0,0,0,.5); backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,.35);
+  padding: 6px 15px; border-radius: 999px;
+  font-size: .72rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  color: #ffd479;
+}
+
+@media (max-width: 640px) {
+  .page-nav { padding: 14px 8px; }
+  .page-nav-label { font-size: .66rem; }
+  .page-nav-arrow { font-size: 1.1rem; }
+}
 
 /* ---------- footer ---------- */
 .hub-footer {
