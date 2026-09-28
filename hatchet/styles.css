@@ -281,7 +281,7 @@ main { padding-bottom: 60px; }
 .tool {
   background: var(--card); border-radius: var(--radius); padding: 22px 20px 20px;
   box-shadow: var(--shadow-sm); border: 1px solid var(--line); cursor: pointer; text-align: left;
-  color: inherit; font: inherit; display: flex; flex-direction: column; gap: 6px;
+  color: inherit; font: inherit; text-decoration: none; display: flex; flex-direction: column; gap: 6px;
   transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
 }
 .tool:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: var(--fern); }

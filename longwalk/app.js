@@ -251,6 +251,7 @@ function renderHome() {
         <button class="tool reveal" style="--d:.12s" onclick="go('week10/rubric')"><img src="${IMG("icon-rubric")}" alt="" /><b>Progress Rubric</b><span>Track reading progress across all ten rubric strands.</span></button>
         <button class="tool reveal" style="--d:.18s" onclick="go('week10')"><img src="${IMG("icon-presentation")}" alt="" /><b>Final Project</b><span>Week 10 options, lesson plan, gallery walk and celebration.</span></button>
         <button class="tool reveal" style="--d:.24s" onclick="go('week10/certificate')"><img src="${IMG("badge-perseverance")}" alt="" /><b>Certificate</b><span>A printable "Hope Crosses Every Border" completion certificate.</span></button>
+        <a class="tool reveal" style="--d:.3s" href="images/web/poster-download.jpg" download="A_Long_Walk_to_Water_Classroom_Poster.jpg"><img src="${IMG("icon-poster")}" alt="" /><b>Classroom Poster</b><span>A printable poster for your reading corner or door.</span></a>
       </div>
     </div>
   `;

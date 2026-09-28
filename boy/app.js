@@ -167,6 +167,7 @@ function renderLanding(){
       <button class="tool reveal" style="--d:.15s" onclick="nav('rubric')">${imgOr(typeof IMG_ICON_QUIZ!=='undefined'?IMG_ICON_QUIZ:null,'<div class="emoji">📊</div>')}<b>Reading rubric</b><span>Track every student against the ${RUBRIC.length} whole-programme criteria.</span></button>
       <button class="tool reveal" style="--d:.2s" onclick="nav('rubricguide')"><div class="emoji">📋</div><b>Marking guide</b><span>What Not Achieved, Achieved and Excelled look like for each criterion.</span></button>
       <button class="tool reveal" style="--d:.25s" onclick="nav('certificate')">${imgOr(typeof IMG_BADGE_BRAVE_READER!=='undefined'?IMG_BADGE_BRAVE_READER:null,'<div class="emoji">🏅</div>')}<b>Certificate</b><span>A printable completion certificate for the celebration.</span></button>
+      <a class="tool reveal" style="--d:.3s" href="images/web/poster-download.jpg" download="Boy_Classroom_Poster.jpg">${imgOr(typeof IMG_ICON_POSTER!=='undefined'?IMG_ICON_POSTER:null,'<div class="emoji">🖼️</div>')}<b>Classroom Poster</b><span>A printable poster for your reading corner or door.</span></a>
     </div>
   </div>
   ${footerHTML()}`;

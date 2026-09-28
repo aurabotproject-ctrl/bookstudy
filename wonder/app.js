@@ -189,6 +189,7 @@ function renderHome() {
         <button class="tool reveal" style="--d:.1s" onclick="downloadReadingSchedule()">${imgTag("iconSchedule", "")}<b>Reading schedule</b><span>Day-by-day reading ranges for the whole term.</span><small>Downloads a page</small></button>
         <button class="tool reveal" style="--d:.15s" onclick="go('rubric')">${imgTag("iconQuizDay", "")}<b>Progress rubric</b><span>Mark the class on R1–R10: Not Achieved, Working Towards, Achieved.</span></button>
         <button class="tool reveal" style="--d:.2s" onclick="go('week10/fri')">${imgTag("choiceKindBadge", "")}<b>Certificates</b><span>Print "Certificate of Choosing Kind" for the celebration.</span></button>
+        <a class="tool reveal" style="--d:.25s" href="images/web/poster-download.jpg" download="Wonder_Classroom_Poster.jpg">${imgTag("iconPoster", "")}<b>Classroom Poster</b><span>A printable poster for your reading corner or door.</span></a>
       </div>
     </div>`;
   const grid = main.querySelector("#journeyGrid");
