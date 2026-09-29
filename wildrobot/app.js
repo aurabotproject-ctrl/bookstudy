@@ -222,6 +222,17 @@ function renderHome() {
         <div class="stat"><b data-count="${WEEKS.length * 4 + 4}">${WEEKS.length * 4 + 4}</b><span>creative projects</span></div>
       </div>
 
+
+      <section class="poster-feature reveal">
+        <button class="poster-img" onclick="openPoster()" aria-label="View the Wild Robot poster larger"><img src="images/web/poster.webp" alt="The Wild Robot by Peter Brown — book study poster" onerror="this.onerror=null;this.src='images/web/poster-download.jpg'" /></button>
+        <div class="poster-text">
+          <div class="kicker">Nature connects us all</div>
+          <h2>An unexpected friendship, a wilder world</h2>
+          <p>Washed ashore on a remote island, a robot named Roz must learn to survive — and slowly becomes part of the wild world around her. Tap the poster to see it full size, or print it to launch the unit in your classroom.</p>
+          <div class="hero-ctas"><button class="btn copper" onclick="openPoster()">View poster</button><a class="btn ghost" href="images/web/poster-download.jpg" download="Wild_Robot_Classroom_Poster.jpg">Download poster</a></div>
+        </div>
+      </section>
+
       <div class="section-head" id="journey">
         <div><div class="kicker">The journey</div><h2>Roz's story, week by week</h2>
           <p>Follow the island through the seasons. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
@@ -818,6 +829,16 @@ function printProjects(weekNum) {
 }
 
 function printBlankRubric() { openBook("teacher-pack.html?section=record"); }
+
+
+function openPoster() {
+  const o = document.createElement("div");
+  o.className = "poster-lightbox";
+  o.innerHTML = `<img src="images/web/poster-download.jpg" alt="The Wild Robot by Peter Brown — book study poster" /><button class="btn glass" aria-label="Close">Close ✕</button>`;
+  o.onclick = () => o.remove();
+  document.addEventListener("keydown", function esc(e) { if (e.key === "Escape") { o.remove(); document.removeEventListener("keydown", esc); } });
+  document.body.appendChild(o);
+}
 
 function downloadReadingSchedule() {
   let text = "THE WILD ROBOT — TERM READING SCHEDULE\n" + "=".repeat(45) + "\n\n";

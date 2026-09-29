@@ -222,6 +222,17 @@ function renderHome() {
         <div class="stat"><b data-count="${WEEKS.length * 4 + 4}">${WEEKS.length * 4 + 4}</b><span>creative projects</span></div>
       </div>
 
+
+      <section class="poster-feature reveal">
+        <button class="poster-img" onclick="openPoster()" aria-label="View the One and Only Ivan poster larger"><img src="images/web/poster.webp" alt="The One and Only Ivan by Katherine Applegate — book study poster" onerror="this.onerror=null;this.src='images/web/poster-download.jpg'" /></button>
+        <div class="poster-text">
+          <div class="kicker">Some animals have big stories to tell</div>
+          <h2>A remarkable friendship, a different perspective</h2>
+          <p>Ivan the gorilla has lived behind glass at a shopping mall for years — until a baby elephant named Ruby arrives and changes everything he thought he knew about home. Tap the poster to see it full size, or print it to launch the unit in your classroom.</p>
+          <div class="hero-ctas"><button class="btn copper" onclick="openPoster()">View poster</button><a class="btn ghost" href="images/web/poster-download.jpg" download="The_One_and_Only_Ivan_Classroom_Poster.jpg">Download poster</a></div>
+        </div>
+      </section>
+
       <div class="section-head" id="journey">
         <div><div class="kicker">The journey</div><h2>Ivan's story, week by week</h2>
           <p>Follow Ivan through the mall, the memories and the mural. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
@@ -818,6 +829,16 @@ function printProjects(weekNum) {
 }
 
 function printBlankRubric() { openBook("teacher-pack.html?section=record"); }
+
+
+function openPoster() {
+  const o = document.createElement("div");
+  o.className = "poster-lightbox";
+  o.innerHTML = `<img src="images/web/poster-download.jpg" alt="The One and Only Ivan by Katherine Applegate — book study poster" /><button class="btn glass" aria-label="Close">Close ✕</button>`;
+  o.onclick = () => o.remove();
+  document.addEventListener("keydown", function esc(e) { if (e.key === "Escape") { o.remove(); document.removeEventListener("keydown", esc); } });
+  document.body.appendChild(o);
+}
 
 function downloadReadingSchedule() {
   let text = "THE ONE AND ONLY IVAN — TERM READING SCHEDULE\n" + "=".repeat(47) + "\n\n";

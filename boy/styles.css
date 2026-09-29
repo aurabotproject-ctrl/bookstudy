@@ -566,3 +566,14 @@ footer b { color: #fff; }
   .wb-cover img { height: 100%; object-fit: cover; }
   .certificate { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-shadow: none; }
 }
+
+.poster-feature { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 40px; align-items: center; margin: 56px 0 8px; }
+.poster-feature .poster-img { padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 60px rgba(59,36,21,.35); transform: rotate(-1.5deg); transition: transform .3s; }
+.poster-feature .poster-img:hover { transform: rotate(0) scale(1.02); }
+.poster-feature img { display: block; width: 100%; height: auto; }
+.poster-text h2 { font-family: var(--display); color: var(--choc); margin: 6px 0 12px; font-size: clamp(26px, 3.4vw, 38px); }
+.poster-text p { max-width: 56ch; line-height: 1.6; color: var(--ink-soft); }
+.poster-text .hero-ctas { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+.poster-lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(59,36,21,.92); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 20px; cursor: zoom-out; }
+.poster-lightbox img { max-height: 84vh; max-width: 92vw; border-radius: 12px; box-shadow: 0 20px 80px rgba(0,0,0,.6); }
+@media (max-width: 720px) { .poster-feature { grid-template-columns: 1fr; justify-items: center; text-align: center; } .poster-feature .poster-img { max-width: 300px; } }

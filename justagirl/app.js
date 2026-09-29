@@ -222,6 +222,17 @@ function renderHome() {
         <div class="stat"><b data-count="${WEEKS.length * 4 + 4}">${WEEKS.length * 4 + 4}</b><span>creative projects</span></div>
       </div>
 
+
+      <section class="poster-feature reveal">
+        <button class="poster-img" onclick="openPoster()" aria-label="View the Just a Girl poster larger"><img src="images/web/poster.webp" alt="Just a Girl by Lia Levi — book study poster" onerror="this.onerror=null;this.src='images/web/poster-download.jpg'" /></button>
+        <div class="poster-text">
+          <div class="kicker">A story of family, courage and hope</div>
+          <h2>A brave girl in a challenging time</h2>
+          <p>A true memoir of a Jewish girl hiding in plain sight in wartime Rome, Just a Girl shows ordinary life carrying on under extraordinary danger — and the quiet courage it took to survive. Tap the poster to see it full size, or print it to launch the unit in your classroom.</p>
+          <div class="hero-ctas"><button class="btn copper" onclick="openPoster()">View poster</button><a class="btn ghost" href="images/web/poster-download.jpg" download="Just_a_Girl_Classroom_Poster.jpg">Download poster</a></div>
+        </div>
+      </section>
+
       <div class="section-head" id="journey">
         <div><div class="kicker">The journey</div><h2>Lia's story, week by week</h2>
           <p>Follow Lia from a shy six-year-old on an Italian beach to a girl who finds her voice, hides in plain sight, and comes home free. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
@@ -818,6 +829,16 @@ function printProjects(weekNum) {
 }
 
 function printBlankRubric() { openBook("teacher-pack.html?section=record"); }
+
+
+function openPoster() {
+  const o = document.createElement("div");
+  o.className = "poster-lightbox";
+  o.innerHTML = `<img src="images/web/poster-download.jpg" alt="Just a Girl by Lia Levi — book study poster" /><button class="btn glass" aria-label="Close">Close ✕</button>`;
+  o.onclick = () => o.remove();
+  document.addEventListener("keydown", function esc(e) { if (e.key === "Escape") { o.remove(); document.removeEventListener("keydown", esc); } });
+  document.body.appendChild(o);
+}
 
 function downloadReadingSchedule() {
   let text = "JUST A GIRL — TERM READING SCHEDULE\n" + "=".repeat(45) + "\n\n";

@@ -164,6 +164,17 @@ function renderHome() {
         <div class="stat"><b>40</b><span>creative projects</span></div>
       </div>
 
+
+      <section class="poster-feature reveal">
+        <button class="poster-img" onclick="openPoster()" aria-label="View the Wonder poster larger"><img src="images/web/poster.webp" alt="Wonder by R.J. Palacio — book study poster" onerror="this.onerror=null;this.src='images/web/poster-download.jpg'" /></button>
+        <div class="poster-text">
+          <div class="kicker">Same stories, different perspectives</div>
+          <h2>A brighter world, one act of kindness at a time</h2>
+          <p>August Pullman just wants to be treated like an ordinary kid. Told from multiple points of view, Wonder is a story about kindness, courage and choosing to be kind when it's not the easy choice. Tap the poster to see it full size, or print it to launch the unit in your classroom.</p>
+          <div class="hero-ctas"><button class="btn" onclick="openPoster()">View poster</button><a class="btn ghost" href="images/web/poster-download.jpg" download="Wonder_Classroom_Poster.jpg">Download poster</a></div>
+        </div>
+      </section>
+
       <div class="section-head" id="journey">
         <div><div class="kicker">Your term at a glance</div><h2>Ten stops, from meeting Auggie to the celebration</h2>
           <p>Every week is built and ready to explore. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
@@ -617,6 +628,16 @@ function nzcBoxHTML(){
 }
 
 /* ============ DOWNLOADABLE READING SCHEDULE ============ */
+
+function openPoster() {
+  const o = document.createElement("div");
+  o.className = "poster-lightbox";
+  o.innerHTML = `<img src="images/web/poster-download.jpg" alt="Wonder by R.J. Palacio — book study poster" /><button class="btn glass" aria-label="Close">Close ✕</button>`;
+  o.onclick = () => o.remove();
+  document.addEventListener("keydown", function esc(e) { if (e.key === "Escape") { o.remove(); document.removeEventListener("keydown", esc); } });
+  document.body.appendChild(o);
+}
+
 function downloadReadingSchedule(){
   const weekSection = (n)=>{
     const dayRows = dayOrder.map(k=>{

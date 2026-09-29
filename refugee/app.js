@@ -222,6 +222,17 @@ function renderHome() {
         <div class="stat"><b data-count="${WEEKS.length * 4 + 4}">${WEEKS.length * 4 + 4}</b><span>creative projects</span></div>
       </div>
 
+
+      <section class="poster-feature reveal">
+        <button class="poster-img" onclick="openPoster()" aria-label="View the Refugee poster larger"><img src="images/web/poster.webp" alt="Refugee by Alan Gratz — book study poster" onerror="this.onerror=null;this.src='images/web/poster-download.jpg'" /></button>
+        <div class="poster-text">
+          <div class="kicker">Courage, resilience and hope can travel anywhere</div>
+          <h2>Three lives, three journeys, one powerful story</h2>
+          <p>Three children from three different eras — Nazi Germany, 1990s Cuba and present-day Syria — each risk everything on a desperate journey to find safety. Tap the poster to see it full size, or print it to launch the unit in your classroom.</p>
+          <div class="hero-ctas"><button class="btn copper" onclick="openPoster()">View poster</button><a class="btn ghost" href="images/web/poster-download.jpg" download="Refugee_Classroom_Poster.jpg">Download poster</a></div>
+        </div>
+      </section>
+
       <div class="section-head" id="journey">
         <div><div class="kicker">The journeys</div><h2>Three stories, week by week</h2>
           <p>Follow Josef, Isabel and Mahmoud as their three journeys for safety unfold side by side. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
@@ -818,6 +829,16 @@ function printProjects(weekNum) {
 }
 
 function printBlankRubric() { openBook("teacher-pack.html?section=record"); }
+
+
+function openPoster() {
+  const o = document.createElement("div");
+  o.className = "poster-lightbox";
+  o.innerHTML = `<img src="images/web/poster-download.jpg" alt="Refugee by Alan Gratz — book study poster" /><button class="btn glass" aria-label="Close">Close ✕</button>`;
+  o.onclick = () => o.remove();
+  document.addEventListener("keydown", function esc(e) { if (e.key === "Escape") { o.remove(); document.removeEventListener("keydown", esc); } });
+  document.body.appendChild(o);
+}
 
 function downloadReadingSchedule() {
   let text = "REFUGEE — TERM READING SCHEDULE\n" + "=".repeat(45) + "\n\n";

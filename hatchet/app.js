@@ -222,6 +222,17 @@ function renderHome() {
         <div class="stat"><b data-count="${WEEKS.length * 4 + 4}">${WEEKS.length * 4 + 4}</b><span>creative projects</span></div>
       </div>
 
+
+      <section class="poster-feature reveal">
+        <button class="poster-img" onclick="openPoster()" aria-label="View the Hatchet poster larger"><img src="images/web/poster.webp" alt="Hatchet by Gary Paulsen — book study poster" onerror="this.onerror=null;this.src='images/web/poster-download.jpg'" /></button>
+        <div class="poster-text">
+          <div class="kicker">Skills, courage and a deeper connection to the wild</div>
+          <h2>A boy alone in the wilderness</h2>
+          <p>After a plane crash strands him in the Canadian wilderness with nothing but a hatchet, Brian must learn to survive alone — and discovers a strength he never knew he had. Tap the poster to see it full size, or print it to launch the unit in your classroom.</p>
+          <div class="hero-ctas"><button class="btn copper" onclick="openPoster()">View poster</button><a class="btn ghost" href="images/web/poster-download.jpg" download="Hatchet_Classroom_Poster.jpg">Download poster</a></div>
+        </div>
+      </section>
+
       <div class="section-head" id="journey">
         <div><div class="kicker">The survival</div><h2>One boy, week by week</h2>
           <p>Follow Brian Robeson week by week as he learns — the hard way — to survive alone in the wild. Pick a week to open its lessons, worksheets, quiz and projects.</p></div>
@@ -818,6 +829,16 @@ function printProjects(weekNum) {
 }
 
 function printBlankRubric() { openBook("teacher-pack.html?section=record"); }
+
+
+function openPoster() {
+  const o = document.createElement("div");
+  o.className = "poster-lightbox";
+  o.innerHTML = `<img src="images/web/poster-download.jpg" alt="Hatchet by Gary Paulsen — book study poster" /><button class="btn glass" aria-label="Close">Close ✕</button>`;
+  o.onclick = () => o.remove();
+  document.addEventListener("keydown", function esc(e) { if (e.key === "Escape") { o.remove(); document.removeEventListener("keydown", esc); } });
+  document.body.appendChild(o);
+}
 
 function downloadReadingSchedule() {
   let text = "HATCHET — TERM READING SCHEDULE\n" + "=".repeat(45) + "\n\n";

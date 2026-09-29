@@ -24,6 +24,16 @@ function hashFor(){
   const weekViews = ['weekhub','day','lessonplan','weekpack','quizprint','quizprintkey'];
   return '#' + state.view + (weekViews.includes(state.view) ? '/' + curWeek : '') + (state.day ? '/' + state.day : '');
 }
+
+function openPoster() {
+  const o = document.createElement("div");
+  o.className = "poster-lightbox";
+  o.innerHTML = `<img src="images/web/poster-download.jpg" alt="Boy: Tales of Childhood by Roald Dahl — book study poster" /><button class="btn glass" aria-label="Close">Close ✕</button>`;
+  o.onclick = () => o.remove();
+  document.addEventListener("keydown", function esc(e) { if (e.key === "Escape") { o.remove(); document.removeEventListener("keydown", esc); } });
+  document.body.appendChild(o);
+}
+
 function nav(view, day){
   state = {view, day: day||null}; slideIdx=0; slideDir=0; sheetMode='onscreen'; quizSubmitted=false;
   try{ history.pushState({view, day:state.day, week:curWeek}, '', hashFor() === '#' ? location.pathname + location.search : hashFor()); }catch(e){}
@@ -149,6 +159,17 @@ function renderLanding(){
       <div><b>10</b><span>weeks</span></div><div><b>36</b><span>reading lessons</span></div>
       <div><b>${qCount}</b><span>quiz questions</span></div><div><b>${RUBRIC.length}</b><span>rubric criteria</span></div>
     </div>
+
+    <section class="poster-feature reveal">
+      <button class="poster-img" onclick="openPoster()" aria-label="View the Boy poster larger"><img src="images/web/poster.webp" alt="Boy: Tales of Childhood by Roald Dahl — book study poster" onerror="this.onerror=null;this.src='images/web/poster-download.jpg'" /></button>
+      <div class="poster-text">
+        <div class="kicker">The stories that shaped a writer</div>
+        <h2>A curious childhood, real adventures</h2>
+        <p>Roald Dahl's own true stories — from a chocolate factory's secret taste tests to a Norwegian island summer — reveal the remarkable childhood behind the world's most beloved storyteller. Tap the poster to see it full size, or print it to launch the unit in your classroom.</p>
+        <div class="hero-ctas"><button class="btn" onclick="openPoster()">View poster</button><a class="btn ghost" href="images/web/poster-download.jpg" download="Boy_Classroom_Poster.jpg">Download poster</a></div>
+      </div>
+    </section>
+
 
     <div class="section-head"><div><div class="kicker">The term at a glance</div><h2>Ten weeks, one memoir</h2>
       <p>Pick a jar to open that week's slides, worksheets, quiz and project menu.</p></div>
