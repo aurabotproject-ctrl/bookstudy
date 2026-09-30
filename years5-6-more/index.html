@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Reading Room — More Years 5–6 Book Studies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div class="stars" id="stars" aria-hidden="true"></div>
+
+<a class="page-nav-vert up" href="../index.html" aria-label="Back to the first four Years 5–6 book studies">
+  <span class="page-nav-arrow">&uarr;</span>
+  <span>Back to the first four</span>
+</a>
+
+<a class="page-nav next" href="../years7-8/index.html" aria-label="Go to Years 7–8 book studies">
+  <span class="page-nav-label">Years 7&ndash;8</span>
+  <span class="page-nav-arrow">&rarr;</span>
+</a>
+
+<header class="hub-hero">
+  <div class="hero-bg placeholder-years5-6-more" style="background-image:url('../images/years5-6-more-hero.jpg')"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-panel">
+      <p class="kicker">Room 14 · Years 5&ndash;6 Book Studies</p>
+      <h1>More To&nbsp;Explore</h1>
+      <p class="tagline">Four more worlds waiting to be discovered — including one still being written. Pick a book study below and start the adventure.</p>
+    </div>
+  </div>
+  <div class="hero-fade" aria-hidden="true"></div>
+</header>
+
+<main class="shelf">
+  <div class="shelf-grid">
+
+    <a class="book-card crenshaw" href="../crenshaw/index.html">
+      <div class="card-bg" style="background-image:url('../images/crenshaw-hero.webp')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="../images/crenshaw-logo.webp" alt="" />
+        <p class="card-eyebrow">Katherine Applegate</p>
+        <h2>Crenshaw</h2>
+        <p class="card-blurb">When Jackson's family hits hard times, his giant imaginary cat Crenshaw reappears — just when he needs a friend most.</p>
+        <span class="enter-btn">Step under the umbrella <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+    <a class="book-card bfg" href="../bfg/index.html">
+      <div class="card-bg" style="background-image:url('../images/bfg-hero.webp')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="../images/bfg-logo.webp" alt="" />
+        <p class="card-eyebrow">Roald Dahl</p>
+        <h2>The BFG</h2>
+        <p class="card-blurb">A lonely giant who blows dreams into children's bedrooms discovers that being different might be exactly what saves the world.</p>
+        <span class="enter-btn">Catch a dream <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+    <a class="book-card robotescapes" href="../robotescapes/index.html">
+      <div class="card-bg" style="background-image:url('../images/robotescapes-hero.webp')"></div>
+      <div class="card-tint"></div>
+      <div class="card-content">
+        <img class="card-logo" src="../images/robotescapes-logo.webp" alt="" />
+        <p class="card-eyebrow">Peter Brown</p>
+        <h2>The Wild Robot Escapes</h2>
+        <p class="card-blurb">Roz's island family is safe — but a farm far away still calls to her, and getting there means crossing a whole wild world.</p>
+        <span class="enter-btn">Continue the journey <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M13.2 4.2 20 11l-6.8 6.8-1.4-1.4L16.2 12H4v-2h12.2L11.8 5.6z"/></svg></span>
+      </div>
+    </a>
+
+    <div class="book-card goingsolo coming-soon">
+      <div class="card-bg" style="background-image:url('../images/goingsolo-hero.webp')"></div>
+      <div class="card-tint"></div>
+      <span class="coming-badge">Coming Soon</span>
+      <div class="card-content">
+        <img class="card-logo" src="../images/goingsolo-logo.webp" alt="" />
+        <p class="card-eyebrow">Roald Dahl</p>
+        <h2>Going Solo</h2>
+        <p class="card-blurb">Dahl's true adventures as a young RAF pilot in Africa and the Second World War. Coming soon to Room 14.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="hub-footer">
+  <p>Four more reading units for Years 5&ndash;6 (one still in the works) &middot; NZ Curriculum Level 3&ndash;4 English &middot; Built for classroom use</p>
+</footer>
+
+<script>
+  // gentle starfield
+  const layer = document.getElementById('stars');
+  const n = 60;
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement('span');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 60 + '%';
+    s.style.setProperty('--d', (2 + Math.random() * 3).toFixed(2) + 's');
+    s.style.setProperty('--delay', (Math.random() * 4).toFixed(2) + 's');
+    s.style.width = s.style.height = (1 + Math.random() * 2).toFixed(1) + 'px';
+    layer.appendChild(s);
+  }
+</script>
+</body>
+</html>

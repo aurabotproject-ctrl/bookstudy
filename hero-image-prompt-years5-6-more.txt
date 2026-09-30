@@ -1,0 +1,48 @@
+IMAGE PROMPT FOR CHATGPT / DALL-E — "More To Explore" hero image
+(second shelf of Years 5-6 book studies: Crenshaw, The BFG, The Wild
+Robot Escapes, Going Solo)
+====================================================================
+
+A richly-detailed storybook illustration in a warm painterly animation
+style (Studio-Ghibli-meets-modern-picture-book), wide 16:9 landscape
+composition, no text or lettering anywhere in the image. Joyful,
+wonder-filled and inviting for 9-12 year old readers, matching the
+warmth of an existing image made for the same site (a similar glowing
+storybook portal scene with four corner worlds).
+
+Show a cosy, magical library reading nook at golden-hour dusk, glowing
+from within, that acts as a portal between four different worlds. In the
+centre, an open, oversized storybook rests on a wooden table, its pages
+glowing with warm light and spilling upward into a swirl of soft golden
+sparkles and floating pages.
+
+From that swirl of light, four scenes bloom outward like doorways or
+bursting bubbles, one in each corner, each rendered in its own distinct
+palette so they feel like separate worlds meeting in one image:
+
+- Top-left: a cosy suburban street at night lit by a single lamppost,
+  with a huge, friendly cat's fluffy striped tail curling around the
+  base of the lamp and a bright red-and-yellow umbrella turned upside
+  down nearby, spilling colourful jellybeans (deep plum, warm red,
+  golden lamplight).
+- Top-right: a giant's cupped hands cradling a swirl of glowing dream-
+  bubbles beneath an enormous golden moon, above the rooftops of a
+  sleepy village (deep navy, moonlight gold, dusty violet).
+- Bottom-left: a weathered farmhouse on a hill overlooking a wild
+  forested island in the distance, with a small robot silhouette
+  standing at the fence line looking toward the horizon (moss green,
+  warm copper, soft dawn blue).
+- Bottom-right: a vintage biplane and a few paper aeroplanes looping
+  over a golden African savanna at sunset, acacia trees silhouetted
+  against a huge glowing sun (sunset orange, warm gold, dusty rose).
+
+The four scenes should feel joyful, wonder-filled and inviting for
+9-12 year old readers, with warm cinematic lighting, soft rounded
+shapes, gentle depth of field, and a sense of magic and excitement
+about reading — like stepping through a book into an adventure.
+Rich color, painterly brushwork, slightly whimsical, high detail,
+no visible text, logos, or watermarks.
+
+Once generated, save it as images/years5-6-more-hero.jpg inside the
+bookstudy folder (same spot as hub-hero.jpg and years7-8-hero.jpg) and
+it will appear automatically — the page already points to that file.
