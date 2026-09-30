@@ -104,6 +104,7 @@ function shellStart(crumbs, currentWeek) {
       </button>
       <nav class="crumbs">${crumbs}</nav>
       <div class="topbar-actions">
+        <a class="btn ghost small hub-back" href="../years5-6-more/index.html" title="Back to all book studies">&larr; All Studies</a>
         <div class="week-jump" id="weekJump">
           <button class="btn ghost small" id="weekJumpBtn" aria-haspopup="true">${ICONS.grid} Weeks</button>
           <div class="week-jump-menu">${jump}</div>
