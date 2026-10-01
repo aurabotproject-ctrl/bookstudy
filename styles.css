@@ -250,6 +250,7 @@ h1, h2 { font-family: 'Fraunces', serif; margin: 0; }
 .book-card.crenshaw:hover .card-tint { background: linear-gradient(180deg, rgba(58,20,40,.1) 0%, rgba(58,20,40,.6) 55%, rgba(35,14,26,.95) 100%); }
 .book-card.bfg:hover .card-tint { background: linear-gradient(180deg, rgba(20,26,54,.1) 0%, rgba(20,26,54,.6) 55%, rgba(14,18,38,.95) 100%); }
 .book-card.robotescapes:hover .card-tint { background: linear-gradient(180deg, rgba(58,38,14,.1) 0%, rgba(58,38,14,.6) 55%, rgba(38,24,10,.95) 100%); }
+.book-card.goingsolo:hover .card-tint { background: linear-gradient(180deg, rgba(19,35,61,.1) 0%, rgba(19,35,61,.6) 55%, rgba(12,22,38,.95) 100%); }
 
 .hero-bg.placeholder-years5-6-more {
   background-image:
